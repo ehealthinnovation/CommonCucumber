@@ -4,66 +4,66 @@ INTERACTIONS:
 
 Button:
 check if button exists
-	I should see a “<label>” button <context> “<value>”
+	I should see a "<label>" button <context> "<value>"
 	Examples:
 	| context |
 	| in section |
-	| with id | //id format: page-section-description
-	eg: I should see a “Confirm” button with id “profile-form-confirm”
-	      I should see a “Confirm” button in section “profile-form”
+	| with id | #id format: page-section-description
+	eg: I should see a "Confirm" button with id "profile-form-confirm"
+	      I should see a "Confirm" button in section "profile-form"
 
 click a button
-I select the “<label>” button <context> <value>”
-I click on the “<label>” button <context> “<value>”
+I select the "<label>" button <context> <value>"
+I click on the "<label>" button <context> "<value>"
 	Examples:
 	| context |
 	| in section |
-	| with id | //id format: page-section-description
-	eg: I select the “Confirm” button with id “profile-form-confirm”
-	      I click on the “Confirm” button with id “profile-form-confirm”
+	| with id | #id format: page-section-description
+	eg: I select the "Confirm" button with id "profile-form-confirm"
+	      I click on the "Confirm" button with id "profile-form-confirm"
 
 check if disabled/enabled
-I should see the“<label>” button <context> “<value>” is enabled|disabled
+I should see the "<label>" button <context> "<value>" is enabled|disabled
 	Examples:
 	| context |
 	| in section |
-	| with id | //id format: page-section-description
-	eg: I should see the “Confirm” button with id “profile-form-confirm” is enabled
-	      I should see the “Confirm” button in section “profile-form” is disabled
+	| with id | #id format: page-section-description
+	eg: I should see the "Confirm" button with id "profile-form-confirm" is enabled
+	      I should see the "Confirm" button in section "profile-form" is disabled
 
 check style(color)
-I should see the “<label>” button <context> “<value>” has <style> “<style_value>”
+I should see the "<label>" button <context> "<value>" has <style> "<style_value>"
 	Examples:
 	| context | style |
 	| in section | color |
 	| with id | opacity | 
-//id format: page-section-description
-	eg: I should see the “Confirm” button with id “profile-form-confirm” has color “green”
+#id format: page-section-description
+	eg: I should see the "Confirm" button with id "profile-form-confirm" has color "green"
 
 
 Text:
 check if text exists ( I should see )
-I should <visibility> “<string>”
+I should <visibility> "<string>"
 Examples: 
 |visibility|
 | see |
 | not see |
-eg: I should not see “Today is Monday” 
+eg: I should not see "Today is Monday" 
 
 click on text
-I click on the “<label>” text 
-	eg: I click on the “Confirm” text 
+I click on the "<label>" text 
+	eg: I click on the "Confirm" text 
 
 text position check
-I should see  “<string>” <position> “<string>”
+I should see  <string>" <position> "<string>"
 Examples: 
 | position | 
 | preceding | 
 | following | 
-eg. I should see “hello” preceding “how are you”
+eg. I should see "hello" preceding "how are you"
 
 # Textbox
-# Enter text in “x” box with “id”
+# Enter text in "x" box with "id"
 # Delete text
 # Check for style(error bars)
 # Check for disabled/enabled
@@ -95,7 +95,7 @@ eg. I should see “hello” preceding “how are you”
 # dialog box shown
 # dialog box hidden
 # Lists
-# Should see “x” in “y” row “z” column
+# Should see "x" in "y" row "z" column
 # number of elements
 # Page scroll
 # Scroll up
