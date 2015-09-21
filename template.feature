@@ -97,7 +97,7 @@ Check for page you’re on
 I should be on page "<string>"
 	eg. I should be on page "home"
 
-Image:
+Image: #This also handles the requirement for checking icons
 Check if image exists
 I should <visibility> an image <context> "<value>" 
 	Examples:
@@ -123,14 +123,24 @@ I should see the image <context> "<value>" is enabled|disabled
 	eg: I should see the image with id "profile-image" is enabled
 
 #Menu navigation:
-# Check for elements
-# open menu
-# close menu
-# click on menu option
+ #This is a complex object built from the atomic steps. 
 
-# Checkbox/Radio button
-# Enabled
-# Disabled
+Checkbox/Radio button:
+Visibility
+I see the "<element_name>" <type> <context> "<value>" is <condition>
+Examples:
+	| type         | condition    | context    |
+	| checkbox     | enabled      | in section |
+	| radio button | disabled     | with id    |
+	|              | selected     |            | 
+	|              | not selected |            |
+
+Selection	
+I <selection> the "<element_name>" <type> <context> "<value>"
+Examples:
+	| selection | type        | context    | 
+	| select    | checkbox    | in section |
+	| unselect  | radiobutton | with id    |
 # select
 # unselect
 Slider:
@@ -147,9 +157,12 @@ Examples:
 	eg. I see the "rating" slider with id "rating-slider" has value "4"
 	eg. I increase the "rating" slider with id "rating-slider"'s value to "10"
 
-# Dialog boxes
-# dialog box shown
-# dialog box hidden
+Dialog boxes:
+I should <visibility> dialog box
+Examples: 
+	| visibility |
+	| see        |
+	| not see    |
 
 Lists:
 Visibility: 	
@@ -179,10 +192,6 @@ Examples:
 	| top    |
 	| bottom |
 	eg. I scroll to the top of the page
-
-# Elements (eg: alert icon)
-# Check if elements exist
-# check if elements don’t exist
 
 
 # Meeting minutes:
