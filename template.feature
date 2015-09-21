@@ -64,22 +64,22 @@ eg. I should see "hello" preceding "how are you"
 
 
 Textbox:
-Enter text in textbox
-I enter "<string>" in textbox <context> "<value>"
+Enter/Delete text in textbox
+I enter "<string>" in "<textbox_name>" <context> "<value>"
 	Examples:
 	| context    |
 	| in section |
 	| with id    |
-	eg: I enter "ehealthuser1" in textbox with id "profile-form-username"
-
-Delete text
-I delete "<string>" in textbox <context> "value"
-	eg: I delete "ehealthuser1" in textbox with id "profile-form-username"
+	eg: I enter "ehealthuser1" in "username" textbox with id "profile-form-username"
+	eg: I enter "" in "username" textbox with id "profile-form-username"
 
 # Check for style(error bars)
 
 Check for disabled/enabled
-I should see the textbox <context> "<value>" is enabled|disabled
+I should see the "<textbox_name>" textbox <context> "<value>" is enabled|disabled
+
+Check if textbox exist
+I should see the "<textbox_name>" textbox <context> "<value>"
 
 Dropdown:
 Select y from x dropdown
@@ -92,8 +92,8 @@ I select "<string>" from dropdown <context> "<value>"
 
 Navigation:
 Check for page you’re on
-I should be in page "<string>"
-	eg. I should be in page "home"
+I should be on page "<string>"
+	eg. I should be on page "home"
 
 Image:
 Check if image exists
