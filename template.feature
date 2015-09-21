@@ -73,7 +73,9 @@ I enter "<string>" in "<textbox_name>" <context> "<value>"
 	eg: I enter "ehealthuser1" in "username" textbox with id "profile-form-username"
 	eg: I enter "" in "username" textbox with id "profile-form-username"
 
-# Check for style(error bars)
+Check for style(error bars)
+the "<textbox_name>" textbox <context> has style "<value>"
+	eg. the "Password" textbox with id "password-setup-page" has style "invalid"
 
 Check for disabled/enabled
 I should see the "<textbox_name>" textbox <context> "<value>" is enabled|disabled
@@ -125,24 +127,59 @@ I should see the image <context> "<value>" is enabled|disabled
 # open menu
 # close menu
 # click on menu option
+
 # Checkbox/Radio button
 # Enabled
 # Disabled
 # select
 # unselect
-# Slider
-# current value
-# increase
-# decrease
+Slider:
+current value
+I see the "<slider_name>" slider <context> "<value>" has value "<value>"
+
+increase/decrease
+I <option> the "<slider_name>" slider <context> "<value>"'s value to "<value>"
+
+Examples:
+	| context    | option   |
+	| in section | increase |
+	| with id    | decrease |
+	eg. I see the "rating" slider with id "rating-slider" has value "4"
+	eg. I increase the "rating" slider with id "rating-slider"'s value to "10"
+
 # Dialog boxes
 # dialog box shown
 # dialog box hidden
-# Lists
-# Should see "x" in "y" row "z" column
-# number of elements
-# Page scroll
-# Scroll up
-# Scroll down
+
+Lists:
+Visibility: 	
+I should <visibility> a list item labelled "<string>"	
+Examples: 
+	| visibility |
+	| see        |
+	| not see    |
+	eg. I should see a list item labelled "Health levels"
+
+Check for values: 
+I should <visibility> <selector> "<value>" on the list item labelled "<name>"
+Examples: 
+	| visibility | selector |
+	| see        | flag     |
+	| not see    | text     | 
+	# selectors depend on project - usually can be mapped to classes
+	eg. I should see flag "overdue" on the list item labelled "Feedback"
+		I should not see text "unhealthy" on the list item labelled "Health levels"
+
+Page scroll:
+Scroll up
+I scroll to the <option> of the page
+
+Examples: 
+	| option |
+	| top    |
+	| bottom |
+	eg. I scroll to the top of the page
+
 # Elements (eg: alert icon)
 # Check if elements exist
 # check if elements don’t exist
