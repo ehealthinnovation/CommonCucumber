@@ -148,14 +148,14 @@ current value
 I see the "<slider_name>" slider <context> "<value>" has value "<value>"
 
 increase/decrease
-I <option> the "<slider_name>" slider <context> "<value>"'s value to "<value>"
+I <option> the value of "<slider_name>" slider <context> "<value>" to "<value>"
 
 Examples:
 	| context    | option   |
 	| in section | increase |
 	| with id    | decrease |
 	eg. I see the "rating" slider with id "rating-slider" has value "4"
-	eg. I increase the "rating" slider with id "rating-slider"'s value to "10"
+	eg. I increase the value of "rating" slider with id "rating-slider" to "10"
 
 Dialog boxes:
 I should <visibility> dialog box
@@ -166,12 +166,12 @@ Examples:
 
 Lists:
 Visibility: 	
-I should <visibility> a list item labelled "<string>"	
+I should <visibility> a "<string>" list item
 Examples: 
 	| visibility |
 	| see        |
 	| not see    |
-	eg. I should see a list item labelled "Health levels"
+	eg. I should see a "Health levels" list item
 
 Check for values: 
 I should <visibility> <selector> "<value>" on the list item labelled "<name>"
