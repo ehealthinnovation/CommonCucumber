@@ -1,0 +1,146 @@
+############# Test Patients #############
+
+This file contains a set of test patients that will be used across the tests for iCanCope with Pain. 
+
+In regards to pain profiles, it defines the most important elements relevant to the tests. Fill out any other parts with test data as needed.
+
+## Test Patients with no Pain Profile at start
+
+Patty
+- username: "Patty"
+- disease type: "Chronic Pain" 
+- control: "false"
+- Pain Profile is not complete on startup
+  - nickname: "patty_pain"
+  - age: "19"
+  - gender: "Female"
+  - schoolType: "Yes, full-time"
+  - workType: "Yes, part-time"
+  - activity: "I'm going non-stop!"
+  - painArea 1:
+    - locations: "Head | Upper Back"
+    - name: "Area 1"
+    - qualities: "Aching | Gnawing"
+    - triggers: "Weather | Anxiety"
+  - painArea 2:
+    - locations: "Right Hand"
+    - name: "Right Hand"
+    - qualities: "Tender"
+    - triggers: "Stress"
+
+Arthur
+- username: "Arthur"
+- disease type: "Arthritis" 
+- control: "false"
+- Pain Profile is not complete on startup
+  - nickname: "arthur_arthritis"
+  - age: "14"
+  - gender: "Male"
+  - schoolType: "Yes, full-time"
+  - workType: "Nope"
+  - painArea 1:
+    - locations: "Right Elbow | Left Elbow"
+    - name: "Area 1"
+    - qualities: "Tender | Pins and Needles"
+    - triggers: "Stress | Caffeine"
+  - inflammationLocations: "Right Elbow"
+
+Sarah
+- username: "Sarah"
+- disease type: "Chronic Pain" 
+- Pain Profile is not complete on startup
+  - nickname: "sarah"
+  - age: "24"
+  - gender: "Unspecified"
+  - schoolType: "Nope"
+  - workType: "Yes, full-time"
+  - painArea 1:
+    - locations: "Head"
+    - name: "Head"
+    - qualities: "Tender"
+    - triggers: "Stress"
+  - painArea 2:
+    - locations: "Abdomen"
+    - name: "Abdomen"
+    - qualities: "Throbbing"
+    - triggers: "I'm not sure"
+  - painArea 3:
+    - locations: "Upper Back | Middle Back | Low Back"
+    - name: "Area 1"
+    - qualities: "Aching | Cramping"
+    - triggers: "Moving car"
+
+Chloe
+- username: "Chloe"
+- disease type: "Chronic Pain"
+- control: "true"
+- Pain Profile is not complete on startup
+  - nickname: "chloe"
+  - age: "16"
+  - gender: "Female"
+  - schoolType: "Yes, full-time"
+  - workType: "Nope"
+  - painArea 1:
+    - locations: "Head, Face, Neck"
+    - name: "Area 1"
+    - qualities: "Throbbing"
+    - triggers: "Poor Sleep"
+
+Ahmed
+- username: "Ahmed"
+- Disease type; "Arthritis"
+- control: "false"
+- Pain Profile is not complete on startup
+  - nickname: "ahmed_arthritis"
+  - age: "18"
+  - gender: "Male"
+  - schoolType: "Yes, full-time"
+  - workType: "Yes, part-time"
+  - painArea 1:
+    - locations: "Right Foot"
+    - name: "Right Foot"
+    - qualities: "Aching"
+    - triggers: "Weather"
+  - inflammationLocations: "Right Foot, Left Foot"
+
+## Test Patients with completed Pain Profile
+
+Patty Complete
+- username: "Patty Complete"
+- disease type: "Chronic Pain"
+- control: "false"
+- Pain Profile is complete on startup
+	- nickname: "patty_pain_complete"
+	- Other values the same as Patty
+
+Arthur Complete
+- username: "Arthur Complete"
+- disease type: "Arthritis" patient
+- control: "false"
+- Pain Profile is complete on startup
+	- nickname: "arthur_arthritis_complete"
+	- Other values the same as Arthur
+
+Sarah Complete
+- username: "Sarah Complete"
+- disease type: "Chronic Pain" patient
+- control: "false"
+- Pain Profile is complete on startup
+  - nickname: "sarah_complete"
+  - Other values the same as Sarah
+
+Chloe Complete
+- username: "Sarah Complete"
+- disease type: "Chronic Pain" patient
+- control: "true"
+- Pain Profile is complete on startup
+  - nickname: "chloe_complete"
+  - Other values the same as Chloe
+
+Ahmed Complete
+- username: "Ahmed Complete"
+- disease type: "Arthritis"
+- control: "false"
+- Pain Profile is complete on startup
+  - nickname: "ahmed_arthritis_complete"
+  - Other values the same as Ahmed
