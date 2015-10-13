@@ -2,3 +2,30 @@ start_test_server_in_background
 query(*)
 query("*")
 exit
+start_test_server_in_background
+query("*")
+query("*")
+exit
+query("*")
+start_test_server_in_background
+query("*")
+query("id")
+query('id')
+query('id#')
+start_test_server_in_background
+query("android.support.v7.widget.AppCompatEditText id:'#{editTextField}'")
+query("android.support.v7.widget.AppCompatEditText id:'*}'")
+query("android.support.v7.widget.AppCompatEditText id:'*'")
+query("android.support.v7.widget.AppCompatEditText)
+query("android.support.v7.widget.AppCompatEditText")
+query("android.support.v7.widget.AppCompatEditText id:'#{main_password_edittext}'")
+query("android.support.v7.widget.AppCompatEditText id:'main_password_edittext'")
+exit
+start_test_server_in_background
+query("* text:'Submit'")
+query("* text:'Submit' id:'main_submit_button'")
+touch(query("* text:'Submit'"))
+exit
+start_test_server_in_background
+query("*")
+exit

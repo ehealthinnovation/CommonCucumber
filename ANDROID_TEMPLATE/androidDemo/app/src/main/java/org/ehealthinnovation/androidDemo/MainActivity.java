@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String correctUsername = "ehealth";
-                String correctPassword = "1234";
+                String correctUsername = "test";
+                String correctPassword = "test";
 
                 if (mUsernameEditText.getText().toString().equals(correctUsername) && mPasswordEditText.getText().toString().equals(correctPassword)) {
                     Intent newIntent = new Intent(MainActivity.this, HomeActivity.class);

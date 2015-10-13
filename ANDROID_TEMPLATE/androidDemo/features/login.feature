@@ -4,40 +4,31 @@ Feature: 14481 - User login for app
   So that only I have access to my account
 
 #Background:
-Scenario: test launch
-  Given I launch the app
-  Then I should see the "androidDemo" page
+Scenario: Test app launch
+  	Given I launch the app
+  	Then I should see the "androidDemo" page
+  	And I should see the "Submit" button with id "main_submit_button"
+  	And I should see the "Username" text
+  	And I should see the "Password" text
+  	And I should see the textbox with id "main_username_edittext"
+  	And I should see the textbox with id "main_password_edittext"
+  	And I should not see the text with id "main_error_text"
 
-#  @APPROVEDANDROID
-#Scenario: Login page with enabled or disabled buttons
-#  Then I should see an empty "username" textfield
-#  And I should see an empty "password" textfield
-#  And I should see a disabled "Login" button
-#  When I enter "abc" for "username"
-#  Then I should see a disabled "Login" button
-#  When I enter "123" for "password"
-#  Then I should see an enabled "Login" button
-#  When I enter "" for "username"
-#  Then I should see a disabled "Login" button
+@APPROVEDANDROID
+Scenario: Successful login
+  	When I enter "test" in the textbox with id "main_username_edittext"
+  	And I enter "test" in the textbox with id "main_password_edittext"
+  	And I click on the "Submit" button with id "main_submit_button"
+  	Then I should see the "Home" page
+  	And I should see the "Welcome" text
+
+@APPROVEDANDROID
+Scenario: Unsuccessful Login
+  	When I enter "tes" in the textbox with id "main_username_edittext"
+  	And I enter "tes" in the textbox with id "main_password_edittext"
+  	And I click on the "Submit" button with id "main_submit_button"
+  	Then I should see the "Please enter the correct username and password" text
 
 
-#  @APPROVEDANDROID
-#Scenario: Successful login
-#  When I enter valid user credentials
-#  And I select the "Submit" button
-#  Then I should see the "Home" page
-
-#  @APPROVEDANDROID
-#Scenario Outline: Unsuccessful Login
-#  When I enter a <username> username for "username"
-#  And I enter <password> password for "password"
-#  And I select the "Submit" button
-#  Then I should see an error message "Please enter correct username and password"
-
-#  Examples:
-#    | username | password |
-#    | valid    | invalid  |
-#    | invalid  | valid    |
-#    | invalid  | invalid  |
 
 
