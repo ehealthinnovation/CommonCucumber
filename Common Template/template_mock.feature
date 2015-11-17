@@ -64,5 +64,13 @@ Feature: Common template for Cucumber feature files
     | not see    | following | radio button | disabled     | unselect  | bottom |
     |            |           |              | selected     |           |        |
     |            |           |              | not selected |           |        |
+    
+  Scenario: Feature steps on different projects to click a button
+    When I touch the photo in the banner
+    When I touch "save"
+    When I log in
+    When I select the asthma journal button via dashboard
+    When I select the Cancel button on the popup
+    When I select the Next button on the invite page
 
 
