@@ -36,8 +36,8 @@ Feature: Common template for Cucumber feature files
     #Textbox
     When I enter "<string>" in the "<textbox_name>" textbox with id "<string>"
     Then I should <visibility> the "<textbox_name>" textbox with id "<string>"
-    And the "<textbox_name>" textbox with id "<value>" has style "<value>"
-    And the "<textbox_name>" textbox with id "<value>" is <condition>
+    And I should see the "<textbox_name>" textbox with id "<value>" has "<value>" style
+    And I should see the "<textbox_name>" textbox with id "<value>" is <condition>
 
     #dropdown
     And I select ".*" for the dropdown named ".*"
@@ -51,26 +51,17 @@ Feature: Common template for Cucumber feature files
     And the "<element_name>" <type> with id "<value>" should be <condition>
 
     #Dialog box
-    Then I should <visibility> dialog box
+    Then I should <visibility> a dialog box with id "<dialog_id>"
     When I select any area outside of the dialog
 
     #Lists
-    Then I should <visibility> a "<string>" for the "<name>" list item with id "<string>"
-    When I select the "<string>" option for the "<name>" list item with id "<string>"
+    Then I should <visibility> "<string>" for the list item named "<name>"
+    When I select the "<string>" option for the list item named "<name>"
 
     Examples:
-    | visibility | position  | type         | condition    | selection | option |
-    | see        | preceding | checkbox     | enabled      | select    | top    |
-    | not see    | following | radio button | disabled     | unselect  | bottom |
-    |            |           |              | selected     |           |        |
-    |            |           |              | not selected |           |        |
-    
-  Scenario: Feature steps on different projects to click a button
-    When I touch the photo in the banner
-    When I touch "save"
-    When I log in
-    When I select the asthma journal button via dashboard
-    When I select the Cancel button on the popup
-    When I select the Next button on the invite page
-
+      | visibility | position  | type         | condition    | selection | option |
+      | see        | preceding | checkbox     | enabled      | select    | top    |
+      | not see    | following | radio button | disabled     | unselect  | bottom |
+      |            |           |              | selected     |           |        |
+      |            |           |              | not selected |           |        |
 
